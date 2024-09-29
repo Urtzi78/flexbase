@@ -18,7 +18,7 @@ body {
     border: 2px solid black;
     margin-right: 10px;
     color: black;
-    padding-left: 5px
+    padding: 30px;
 }
 
 .left {
@@ -37,16 +37,22 @@ body {
 .right {
     flex: 0.75;
     background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 40px;
 }
 
+
 .form-group {
-    margin-bottom: 10px;
+    margin-bottom: 25px;
+    display: flex;
 }
 
 label {
     display: block;
     font-weight: bold;
-    margin-bottom: 5px;
+    padding-right: 10px;
 }
 
 input[type="text"] {
@@ -61,8 +67,4 @@ button {
     background-color: #f0f0f0;
     border: 1px solid #000;
     cursor: pointer;
-}
-
-#prev {
-    margin-right: 5px;
 }
