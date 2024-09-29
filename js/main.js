@@ -65,6 +65,23 @@ function liburutegia() {
         liburuaEguneratu();
     });
 
+    document.getElementById("bilatu").addEventListener("click", () => {
+        const sarreraISBN = isbnInput.value;
+        const liburuAurkitua = db.find(liburu => liburu.isbn === sarreraISBN);
+
+        if (liburuAurkitua) {
+            izenburuaInput.value = liburuAurkitua.izenburua;
+            egileaInput.value = liburuAurkitua.egilea;
+            dataInput.value = liburuAurkitua.data;
+            irudia.src = "https://covers.openlibrary.org/b/id/" + liburuAurkitua.filename;
+        } else {
+            izenburuaInput.value = "Ez da aurkitu liburua";
+            egileaInput.value = "";
+            dataInput.value = "";
+            irudia.src = "ezaurkitua.png";
+        }
+    });
+
 }
 
 window.onload = liburutegia;
