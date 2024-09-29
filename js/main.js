@@ -54,17 +54,13 @@ function liburutegia() {
     liburuaEguneratu();
 
     document.getElementById("hurrengo").addEventListener("click", () => {
-        if (ind == db.length - 1)
-            ind = 0;
-        else
+        if (ind != db.length - 1)
             ind++;
         liburuaEguneratu();
     });
 
     document.getElementById("aurreko").addEventListener("click", () => {
-        if (ind == 0)
-            ind = db.length - 1;
-        else
+        if (ind != 0)
             ind--;
         liburuaEguneratu();
     });
