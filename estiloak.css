@@ -1,5 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
 .flex-container {
     display: flex;
+    margin: 0 auto;
 }
 
 .flex {
@@ -7,14 +19,50 @@
     margin-right: 10px;
     color: black;
     padding-left: 5px
-}  
+}
 
 .left {
     flex: 0.25;
     background-color: lightgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-cover {
+    max-width: 100%;
+    height: auto;
 }
 
 .right {
     flex: 0.75;
     background-color: lightblue;
-} 
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #000;
+    background-color: #fff;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+#prev {
+    margin-right: 5px;
+}
